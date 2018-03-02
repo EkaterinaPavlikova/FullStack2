@@ -1,0 +1,29 @@
+Серверная часть WebAPIServer
+
+- тип проекта: ASP NET Core Web Application
+- база данных: SQL Server LocalDb
+- работа с базой посредством Entity Framework
+
+	База данных "Students" содержит таблицы : Group , RecordBook, Students,
+	StudentSubject, Subjects.
+
+		со следующими связями : 
+
+		Students -one-to-many - Group
+		Students - one-to-one - RecordBook
+		Students - many-to-many - Subjects
+
+	Для связи many-to-many создана промежуточная связывающая таблица StudentSubject.
+	Сама связь many-to-many была реализована с помощью механизма Fluent API.
+    
+	Для каждой сущности реализован CRUD функционал.	
+	Для клиента используется модель ViewModelStudents, которая основана на таблице Students 
+	
+	
+Клиентская часть «WebClient»
+
+- веб-приложение на ReactJS
+
+ 
+
+
